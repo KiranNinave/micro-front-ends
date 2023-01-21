@@ -11,8 +11,13 @@ module.exports = {
       name: "cart",
       filename: "remoteEntry.js",
       exposes: {
-        "./CartShow": "./src/index",
+        "./CartShow": "./src/bootstrap.js",
       },
+      shared: {
+        faker: {
+          singleton: true, // load only one copy of faker irrespective of the version
+        },
+      }, // faker module is uses by both cart and product
     }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
