@@ -26,3 +26,26 @@
 
 1. Container has to be re-deployed every time ProductList is updated
 2. Tempting to tightyly couple the Container + ProductList together
+
+# Run - Time Integration
+
+1. Engineering team developes ProductList
+2. Time To deploye
+3. ProductList code deployed at https://my-app.com/productlist.js
+4. User navigaties to my-app.co, Container app is loaded
+5. Container app fetches productlist.js and executes its in runtime only when request made
+
+## Pros
+
+1. ProductList can be deployed independently at any time
+2. Diffrent versions of ProductList can be deployed and Container can decide which one to use
+
+## Cons
+
+1. Tooling + setup is far more complicated
+
+### Runtime integration is Hardest to setup + understand
+
+### Most flexible and performat solution around right now
+
+### Be aware - we will spend a lot of time focusing on Webpack and how it works
