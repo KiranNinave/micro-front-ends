@@ -1,4 +1,5 @@
 **/node_modules
+**/dist
 /1_basics of microfrontends/3_ecomm/products/node_modules
 
 # testing
